@@ -1,38 +1,50 @@
-.App {
+:root {
+  --primary-color: #8e6aad;
+  --secondary-color: #c6a2cb;
+  --tertiary-color: #ffeefc;
+  --dark-color: #4d287b;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--tertiary-color);
+  color: var(--dark-color);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.App .appcontent {
+  background: linear-gradient(
+    109.6deg,
+    rgb(177, 173, 219) 11.2%,
+    rgb(226, 206, 237) 91.1%
+  );
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 40px;
+  padding-bottom: 20px;
+  margin-top: 70px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App footer {
+  font-size: small;
+  padding-left: 20px;
+  margin: 5px;
+  font-family: monospace;
+}
+.App footer a {
+  color: var(--primary-color);
+  transition: all 200ms ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App footer a:hover {
+  color: var(--dark-color);
 }
