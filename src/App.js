@@ -1,3 +1,5 @@
+import React from "react";
+import Todo from "./Todo";
 import "./App.css";
 
 function App() {
@@ -6,6 +8,7 @@ function App() {
       <div className="container">
         <div className="appcontent">
           <h1>To Do </h1>
+          <Todo />
         </div>
         <footer>
           Coded by MDR -

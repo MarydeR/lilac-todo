@@ -1,0 +1,38 @@
+:root {
+  --primary-color: #8e6aad;
+  --secondary-color: #c6a2cb;
+  --tertiary-color: #ffeefc;
+  --dark-color: #4d287b;
+}
+
+.Todo form {
+  margin: 0 auto;
+  text-align: center;
+}
+.Todo input {
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.Todo button {
+  background-color: var(--dark-color);
+  color: rgb(244, 229, 245);
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.Todo ul,
+li {
+  list-style: none;
+  text-align: left;
+}
+
+.Todo .todolist {
+  white-space: nowrap;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.Todo .todolist label {
+  padding-left: 0.4em;
+}
