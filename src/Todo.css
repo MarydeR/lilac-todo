@@ -14,12 +14,6 @@
   border-radius: 5px;
   font-size: 20px;
 }
-.Todo button {
-  background-color: var(--dark-color);
-  color: rgb(244, 229, 245);
-  border-radius: 5px;
-  font-size: 18px;
-}
 
 .Todo ul,
 li {
