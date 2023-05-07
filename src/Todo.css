@@ -15,6 +15,17 @@
   font-size: 20px;
 }
 
+.Todo button {
+  background-color: var(--dark-color);
+  color: var(--tertiary-color);
+  border-radius: 5px;
+  font-size: 18px;
+  transition: all 100ms ease-in-out;
+}
+.Todo button:hover {
+  background-color: var(--primary-color);
+}
+
 .Todo ul,
 li {
   list-style: none;
