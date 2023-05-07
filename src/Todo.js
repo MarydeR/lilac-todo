@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "./Todo.css";
 
 export default function Todo() {
@@ -39,6 +40,10 @@ export default function Todo() {
           <li>
             <input type="checkbox" id="checkbox" />
             <label htmlFor="checkbox">item 2 </label>
+          </li>
+          <li>
+            <input type="checkbox" id="checkbox" />
+            <label htmlFor="checkbox">{newWord}</label>
           </li>
         </ul>
       </div>
