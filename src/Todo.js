@@ -1,52 +1,44 @@
 import React from "react";
 import { useState } from "react";
+import List from "./List";
 import "./Todo.css";
 
 export default function Todo() {
-  let [newword, setNeword] = useState("");
-  function listupdate(event) {
+  let [todo, setTodo] = useState("");
+  let [list, setList] = useState([]);
+
+  function addtodo(event) {
     event.preventDefault();
+    if (todo !== "") {
+      setList([...list, todo]);
+      setTodo("");
+    }
   }
 
   function handleNewWord(event) {
-    setNeword(event.target.value);
+    setTodo(event.target.value);
   }
   return (
     <div className="Todo">
       <div className="entry">
-        <form onSubmit={listupdate}>
-          <div class="input-group mb-3">
+        <form>
+          <div className="input-group mb-3">
             <input
               type="text"
-              class="form-control"
-              placeholder="New"
+              className="form-control"
+              placeholder="New Item"
               autoComplete="off"
+              name="todo"
               onChange={handleNewWord}
             />
-            <button class="btn btn-outline-secondary">Update</button>
+            <button className="btn btn-outline-secondary" onClick={addtodo}>
+              Update
+            </button>
           </div>
         </form>
       </div>
-      <div className="todolist">
-        <ul>
-          <li>
-            <input type="checkbox" id="checkbox" />
-            <label htmlFor="checkbox">sample check box </label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkbox" />
-            <label htmlFor="checkbox">item 1 </label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkbox" />
-            <label htmlFor="checkbox">item 2 </label>
-          </li>
-          <li>
-            <input type="checkbox" id="checkbox" />
-            <label htmlFor="checkbox">{newWord}</label>
-          </li>
-        </ul>
-      </div>
+
+      <List data={list} />
     </div>
   );
 }
