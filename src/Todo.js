@@ -15,6 +15,8 @@ export default function Todo() {
       setList([...list, { id: id, task: input, done: false }]);
       setInput("");
     }
+    let inputField = document.getElementById("form");
+    inputField.reset();
   }
 
   function handleinput(event) {
@@ -23,7 +25,7 @@ export default function Todo() {
   return (
     <div className="Todo">
       <div className="entry">
-        <form>
+        <form id="form">
           <div className="input-group mb-3">
             <input
               type="text"
