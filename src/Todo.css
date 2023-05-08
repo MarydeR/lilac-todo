@@ -31,13 +31,3 @@ li {
   list-style: none;
   text-align: left;
 }
-
-.Todo .todolist {
-  white-space: nowrap;
-  font-size: 25px;
-  line-height: 1.5;
-}
-
-.Todo .todolist label {
-  padding-left: 0.4em;
-}
