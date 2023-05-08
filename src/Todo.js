@@ -4,19 +4,21 @@ import List from "./List";
 import "./Todo.css";
 
 export default function Todo() {
-  let [todo, setTodo] = useState("");
+  let [input, setInput] = useState("");
   let [list, setList] = useState([]);
 
-  function addtodo(event) {
+  function handleclick(event) {
     event.preventDefault();
-    if (todo !== "") {
-      setList([...list, todo]);
-      setTodo("");
+
+    if (input !== "") {
+      let id = list.length + 1;
+      setList([...list, { id: id, task: input, done: false }]);
+      setInput("");
     }
   }
 
-  function handleNewWord(event) {
-    setTodo(event.target.value);
+  function handleinput(event) {
+    setInput(event.target.value);
   }
   return (
     <div className="Todo">
@@ -29,9 +31,9 @@ export default function Todo() {
               placeholder="New Item"
               autoComplete="off"
               name="todo"
-              onChange={handleNewWord}
+              onInput={handleinput}
             />
-            <button className="btn btn-outline-secondary" onClick={addtodo}>
+            <button className="btn btn-outline-secondary" onClick={handleclick}>
               Update
             </button>
           </div>

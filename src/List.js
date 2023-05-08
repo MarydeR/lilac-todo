@@ -9,13 +9,15 @@ export default function List(props) {
         <div className="todolist">
           <ul>
             {props.data.map(function (todo, index) {
-              return (
-                <li key="index">
-                  {" "}
-                  <input type="checkbox" id="checkbox" />
-                  <label htmlFor="checkbox"> {todo} </label>
-                </li>
-              );
+              if (todo.done === false) {
+                return (
+                  <li key="index">
+                    {" "}
+                    <input type="checkbox" id="checkbox" />
+                    <label htmlFor="checkbox"> {todo.task} </label>
+                  </li>
+                );
+              } else return null;
             })}
           </ul>
         </div>
