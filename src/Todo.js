@@ -9,7 +9,6 @@ export default function Todo() {
 
   function handleclick(event) {
     event.preventDefault();
-
     if (input !== "") {
       let id = list.length + 1;
       setList([...list, { id: id, task: input, done: false }]);
@@ -22,6 +21,7 @@ export default function Todo() {
   function handleinput(event) {
     setInput(event.target.value);
   }
+
   return (
     <div className="Todo">
       <div className="entry">
@@ -36,12 +36,12 @@ export default function Todo() {
               onInput={handleinput}
             />
             <button className="btn btn-outline-secondary" onClick={handleclick}>
-              Update
+              Add
             </button>
           </div>
         </form>
       </div>
-
+      <div> </div>
       <List data={list} />
     </div>
   );
