@@ -23,6 +23,7 @@ export default function Todo() {
   }
 
   function handlecheckbox(id) {
+    console.log(id);
     let checkedlist = list.map(function (todo) {
       if (todo.id === id) return { ...todo, done: !todo.done };
       else return todo;
