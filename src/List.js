@@ -29,10 +29,6 @@ export default function List(props) {
             })}
           </ul>
         </div>
-        <div>
-          {" "}
-          <button className="btn btn-outline-secondary">Clear</button>
-        </div>
       </div>
     );
   } else {
@@ -43,3 +39,8 @@ export default function List(props) {
     );
   }
 }
+
+//   <div>
+//          {" "}
+//          <button className="btn btn-outline-secondary">Clear</button>
+//        </div>
