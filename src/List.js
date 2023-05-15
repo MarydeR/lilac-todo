@@ -18,6 +18,7 @@ export default function List(props) {
                     {" "}
                     <input
                       type="checkbox"
+                      checked={false}
                       name="todolist"
                       id={todo.id}
                       onChange={handleChange}
@@ -39,8 +40,6 @@ export default function List(props) {
     );
   }
 }
-
-//   <div>
-//          {" "}
-//          <button className="btn btn-outline-secondary">Clear</button>
+// <div>
+//          <button className="btn btn-outline-secondary">Clear</button>{" "}
 //        </div>

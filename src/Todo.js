@@ -23,15 +23,8 @@ export default function Todo() {
   }
 
   function handlecheckbox(id) {
-    console.log(list);
     let idchange = Number(id);
-    let newlist = list.map((obj) => {
-      console.log(obj.id);
-      if (obj.id !== idchange) {
-        console.log(obj);
-        return obj;
-      } else return { ...obj, done: !obj.done };
-    });
+    let newlist = list.filter((obj) => obj.id !== idchange);
     console.log(newlist);
     setList(newlist);
   }
