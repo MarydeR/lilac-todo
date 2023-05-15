@@ -22,6 +22,15 @@ export default function Todo() {
     setInput(event.target.value);
   }
 
+  function handlecheckbox(id) {
+    let checkedlist = list.map(function (todo) {
+      if (todo.id === id) return { ...todo, done: !todo.done };
+      else return todo;
+    });
+    console.log(checkedlist);
+    setList(checkedlist);
+  }
+
   return (
     <div className="Todo">
       <div className="entry">
@@ -31,6 +40,7 @@ export default function Todo() {
               type="text"
               className="form-control"
               placeholder="New Item"
+              required
               autoComplete="off"
               name="todo"
               onInput={handleinput}
@@ -42,7 +52,7 @@ export default function Todo() {
         </form>
       </div>
       <div> </div>
-      <List data={list} />
+      <List data={list} handleChange={handlecheckbox} />
     </div>
   );
 }

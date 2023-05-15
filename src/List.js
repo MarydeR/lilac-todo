@@ -3,6 +3,9 @@ import React from "react";
 import "./List.css";
 
 export default function List(props) {
+  function handleChange(event) {
+    props.handleChange(event.target.id);
+  }
   if (props.data.length !== 0) {
     return (
       <div className="List">
@@ -13,7 +16,12 @@ export default function List(props) {
                 return (
                   <li key="index">
                     {" "}
-                    <input type="checkbox" name="todolist" id="checkbox" />
+                    <input
+                      type="checkbox"
+                      name="todolist"
+                      id={todo.id}
+                      onChange={handleChange}
+                    />
                     <label htmlFor="checkbox"> {todo.task} </label>
                   </li>
                 );
