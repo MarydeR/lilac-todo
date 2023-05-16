@@ -25,7 +25,6 @@ export default function Todo() {
   function handlecheckbox(id) {
     let idchange = Number(id);
     let newlist = list.filter((obj) => obj.id !== idchange);
-    console.log(newlist);
     setList(newlist);
   }
 
